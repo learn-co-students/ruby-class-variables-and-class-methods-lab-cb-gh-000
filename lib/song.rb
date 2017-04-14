@@ -2,21 +2,33 @@ class Song
 
   @@count = 0
   @@genres = []
-  @@artitsts
+  @@artists
 
   def initialize(name, artist, genre)
     @@name = name
     @@artist = artist
     @@artists << artist
     @@genre = genre
-    @@genres << @@genre
+    @@genres << genre
     @@count += 1
   end
 
-  attr_accessor :name, :artist, :genres
+  attr_accessor :name, :artist, :genre
 
   def self.count
     @@count
+  end
+
+  def genre
+    @@genre
+  end
+
+  def name
+    @@name
+  end
+
+  def artist
+    @@artist
   end
 
   def self.genres
@@ -40,7 +52,7 @@ class Song
   genre_hash
   end
 
-  def artist_count
+  def self.artist_count
     artist_hash = {}
     @@artists.each do |genre|
       if artist_hash.has_value?(artist)
@@ -52,6 +64,5 @@ class Song
     end
   artist_hash
   end
-
 
 end
