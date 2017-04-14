@@ -4,7 +4,7 @@ class Song
   @@genres = []
   @@artists
 
-  def initialize(name, artist, genre)
+  def initialize :name, :artist, :genre
     @@name = name
     @@artist = artist
     @@artists << artist
