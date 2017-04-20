@@ -38,9 +38,13 @@ class Song
     result
   end
   def self.artists
-    @@artists.uniq
+    result =[]
+    @@artists.each{|w|
+     result << w if !result.include?(w)
+    }
+    result
   end
   def self.genres
-    @@genres.uniq   
+    @@genres.uniq
   end
 end
