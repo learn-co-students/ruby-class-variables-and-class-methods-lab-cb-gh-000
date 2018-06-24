@@ -21,7 +21,7 @@ Song.artists
   # => ["Jay-Z", "Drake", "Beyonce"]
 ```
 
-We need our `Song` class to be able to show us all of the genres of existing songs:
+We need our `Song` class to bed able to show us all of the genres of existing songs:
 
 ```ruby
 Song.genres
